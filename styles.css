@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* h1{
+    color: white;
+}
+ */
+.card-container{
+    width: 340px;
+    height: 420px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style:preserve-3d;
+    transition: transform 0.7s;
+}
+.card-face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+.card-front{
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    box-shadow: 0 20px 60px purple;
+}
+.card-front h2{
+    font-size: 26;
+    margin-bottom: 15px;
+}
+
+.card-front p{
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.card-back{
+    background: linear-gradient(135deg, #0e2aaa, #7b11e5);
+    color: white;
+    box-shadow: 0 20px 60px rgb(245, 87, 108);
+    transform: rotateY(180deg);
+}
+
+.card-back h2{
+    font-size: 26;
+    margin-bottom: 15px;
+}
+
+.card-back p{
+     font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.hint{
+    margin-top: 24px;
+    font-size: 13px;
+    opacity: 0.6;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.card-front .icon{
+    font-size: 64px;
+    margin-bottom: 24px;
+}
+.card-back .icon{
+    font-size: 64px;
+    margin-bottom: 24px;
+}
